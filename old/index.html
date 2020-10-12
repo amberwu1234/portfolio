@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <style>
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .section{
+      padding: 80px 0;
+      background-color: #eaf0f5;
+    }
+
+    .container{
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .timeLine .timeNode{
+      margin-bottom: 50px;
+    }
+
+    .timeNode{
+      width: 600px;
+      margin: auto;
+      position: relative;
+      background-color: pink;
+    }
+
+    .timeNode .pic{
+      margin: auto;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #cf5963;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .timeNode i{
+      line-height: 60px;
+      font-size: 20px;
+      color: #fff;
+    }
+
+    .timeNode .txt{
+      padding: 20px;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      vertical-align: middle;
+      background-color: #fff;
+    }
+
+    .timeNode .txt:before{
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: -10px;
+      transform: translateY(-50%);
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      border-width: 0 0 10px 10px;
+      border-color: transparent transparent #FFF transparent;
+    }
+
+    
+
+    .timeNode .txt span{
+      display: block;
+      line-height: 2;
+      font-size: 14px;
+    }
+
+    .timeNode  time{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+
+  </style>
+</head>
+<body>
+  <section class="section resume">
+    <div class="container">
+      <div class="sectionTitle">
+        <h2>Resume</h2>
+      </div>
+      <ol class="timeLine">
+        <li class="timeNode">
+            <div class="pic">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+
+            <div class="txt">
+              <h3>平面設計師
+                <span>尤美資訊有限公司(網路通訊業)</span>
+              </h3>
+            </div>
+
+            <time>2013-2014</time>
+        </li>
+
+        <li class="timeNode">
+            <div class="pic">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+
+            <div class="txt">
+              <h3>平面設計師
+                <span>尤美資訊有限公司(網路通訊業)</span>
+              </h3>
+            </div>
+
+            <time>2013-2014</time>
+        </li>
+
+
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ol>
+    </div>
+  </section>
+
+
+</body>
+</html>

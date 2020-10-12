@@ -1,0 +1,501 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;500&family=Roboto:wght@300;700&display=swap');
+
+
+
+img{
+  vertical-align: middle;
+}
+
+section{
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 80px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: -1;
+  background-color: #233b71;
+  font-family: serif;
+  font-family: 'Noto Sans', sans-serif ,'Roboto', sans-serif;
+}
+
+@media screen and (min-width:768px){
+  section{
+    height: 100vh;
+  }
+}
+
+
+.container{
+  max-width: 1200px;
+  padding: 80px 0;
+  box-sizing: border-box;
+  margin: auto;
+}
+
+/* section:nth-child(even){
+  background-color: green;
+} */
+
+
+.title{
+  padding-bottom: 50px;
+  box-sizing: border-box;
+  font-size: 60px;
+  font-weight: 700;
+  color: #F0B900;
+}
+
+@media screen and (min-width:768px){
+  .title{
+    padding-bottom: 50px;
+  }
+}
+
+/*共用區結束---------------------------*/
+
+.aboutMe{
+  padding-top: 80px;
+  display: flex;
+	align-items: center;
+}
+
+@media screen and (min-width:768px){
+  .aboutMe .container{
+    padding-bottom: 130px;
+    background: #3adeff;
+  }
+}
+
+.aboutMe .itemGroup{
+  position: relative;
+}
+
+.aboutMe img{
+  width: 100%;
+}
+
+
+@media screen and (min-width:768px){
+  .aboutMe .title{
+    position: absolute;
+    top: 50px;
+    left: 75px;
+    z-index: 1;
+  }
+
+  .aboutMe .item{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin: 0 75px;
+  }
+
+  .aboutMe .pic{
+    width: 30%;
+    position: absolute;
+    top: 50px;
+    right: 0;
+  }
+}
+
+
+
+.aboutMe .txt{
+  padding: 20px;
+  box-sizing: border-box;
+  background: #FFF;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  line-height: 1.5;
+}
+
+@media screen and (min-width:768px){
+  .aboutMe .txt{
+    padding: 50px;
+    width: calc(100% - 150px);
+    padding-right: calc(30% - 25px);
+    padding-top: 150px;
+    order: -1;
+  }
+}
+
+.aboutMe .txt h3{
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.aboutMe .txt .skill{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+
+
+@media screen and (min-width:768px){
+  .aboutMe .txt .skill{
+    justify-content: flex-start;
+  }
+
+  .aboutMe .skill .icon{
+    max-width: 70px;
+  }
+}
+
+.aboutMe .skill .icon + .icon{
+  margin-left: 20px;
+}
+
+
+
+
+
+
+
+/*resume區塊開始--------------------------------------------*/
+.resume{
+  height: 1200px;
+  position: relative;
+  color: #fff;
+  background:pink;
+  /* display: flex;
+  align-items: center; */
+}
+
+@media screen and (min-width:768px){
+  .resume .title{
+    position: absolute;
+
+  }
+
+  .resume .container{
+    /* background: orangered; */
+  }
+}
+
+
+
+.timeLine{
+  display: flex;
+  flex-direction: column-reverse;
+  overflow: hidden;
+}
+
+@media screen and (min-width:768px){
+  .timeLine{
+    margin: 0 75px;
+    padding-top: 120px;/*給最後的li的absolute留空間*/
+    box-sizing: border-box;
+  }
+}
+
+.timeLine li{
+  display: flex;
+  justify-content:center;
+  position: relative; /*給time手機板參照位置*/
+}
+
+.timeLine li + li{
+  margin-bottom: 40px;
+}
+
+.timeLine li:last-child{
+  margin-bottom: 0;
+}
+
+@media screen and (min-width:768px){
+  
+  .timeLine li + li,
+  .timeLine li:last-child{
+    margin-bottom: 40px;
+  }
+}
+
+
+.timeLine li:nth-child(2) h3{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.timeLine li:nth-child(2) span{
+  order: -1;
+}
+
+/*時間軸3大塊col容器調整區---------------------------*/
+.timeLine .colNode{
+  width: 15%;
+  position: relative;
+}
+
+.timeLine .colTxt{
+  width: 85%;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+.timeLine time{
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-size: 16px;
+  color: #666;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+@media screen and (min-width:768px){
+  .timeLine .colNode{
+    width: 10%;
+  }
+
+  .timeLine .colTxt{
+    width: 45%;
+    padding-left: 0; /*移除手機板的padding*/
+  }
+
+  .timeLine li:nth-child(even) .colTxt{
+    position: relative;
+    left: -55%;
+  }
+
+  .timeLine .colTime{
+    width: 45%;
+    order: -1;
+    text-align: right;
+  }
+
+  .timeLine li:nth-child(even) .colTime{
+    position: relative;
+    left: 55%;
+    text-align: left;
+  }
+
+  .timeLine .colTime time{
+    position: relative;
+    top: 18px;
+    left: 0;
+    color:#FFF;
+  }
+
+  
+}
+/*時間軸3大塊col容器調整區---------------------------*/
+
+
+/*最後li特殊處理------------------------------------*/
+.timeLine li:last-child .txt{
+  background: transparent;
+  box-shadow:none;
+  font-size: 24px;
+}
+
+
+@media screen and (min-width:768px){
+  .timeLine li:last-child{
+    display: block;
+  }
+
+  .timeLine li:last-child .colTxt{
+    position: absolute;
+    top: -120px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;   
+  }
+}
+
+@media screen and (min-width:768px){
+  .timeLine li:last-child .colNode{
+    width: 100%;
+  }
+}
+ 
+
+/*最後li特殊處理------------------------------------*/
+
+
+
+
+.timeLine li:first-child .timeNode:before{
+  content: none;
+}
+
+.timeLine .timeNode .pic{
+  margin: auto;
+  height: 50px;
+  width: 50px;
+  line-height: 47.5px;  /*.pic 50px與img 40px 差距10px*/
+  text-align: center; 
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: #00c2e8;
+  box-shadow:  0  0 10px 0px #3adeff;
+}
+
+.timeLine .timeNode img{
+  margin-top: -15px;
+  width: 50px;   
+}
+
+.timeLine li:not(:first-child) .timeNode:after{ /*小圓點*/
+  content: '\f005';
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  font-size: 25px;
+  text-align: center;
+  display: block;
+  line-height: 48px;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+
+.timeLine li:nth-child(3n+1) .timeNode:after{
+  background-color: #00c2e8;
+}
+
+.timeLine li:nth-child(3n+2) .timeNode:after{
+  background-color: #E13C49;
+}
+
+.timeLine li:nth-child(3n+3) .timeNode:after{
+  background-color: #F0B900;
+}
+
+
+.timeLine .timeNode:before{  /*裝飾線*/
+  content: '';
+  width: 1px;
+  position: absolute;
+  top: 0;
+  bottom: -100px;
+  left: 50%;
+  z-index: -1;
+  transform:translateX(-50%);
+  background-color: #aaa;
+}
+
+
+
+.timeLine .txt{
+  position: relative;
+  margin-left: 10px;  /*需與三角形大小連動---------*/
+  padding-bottom: 40px; /*預留放置time的空間*/
+  border-radius: 10px;
+  line-height: 1.5;
+  background: #FFF;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width:768px){
+  .timeLine .txt{
+    padding-bottom: 10px; /*扣除放置time的空間*/
+  }
+}
+
+
+
+@media screen and (min-width:768px){
+  .timeLine li:nth-child(even) .txt{
+    margin-left: 0;
+    margin-right: 10px; /*需與三角形大小連動---------*/ 
+  }
+}
+
+.timeLine .txt:before{  /*三角形----------------*/
+  content: '';
+  position: absolute;
+  left: -10px;  /*需與三角形大小連動---------*/
+  top: 18px;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 10px 10px 10px 0px;
+}
+
+.timeLine li:nth-child(3n+1) .txt:before{
+  border-color: transparent #00c2e8 transparent transparent;
+}
+
+.timeLine li:nth-child(3n+2) .txt:before{
+  border-color: transparent #E13C49 transparent transparent;
+}
+
+.timeLine li:nth-child(3n+3) .txt:before{
+  border-color: transparent #F0B900 transparent transparent;
+}
+
+
+/*偶數的三角形要相反，因此顏色要跟著換*/
+@media screen and (min-width:768px){
+  .timeLine li:nth-child(even) .txt:before{
+    left: auto;
+    right: -10px; /*需與三角形大小連動---------*/
+    border-width: 10px 0px 10px 10px;
+    border-color: transparent transparent transparent #E13C49;
+  }
+}
+
+/*最後一個三角形位置要置中*/
+@media screen and (min-width:768px){
+  .timeLine li:last-child .txt{
+    margin-right: 0;/*清除.txt設定值*/
+  }
+
+  .timeLine li:last-child .txt:before{
+    left: 50%;
+    transform: translateX(-50%);
+    top: auto;
+    bottom: 0;
+    border-width: 10px 10px 0 10px;
+    border-color: #00c2e8 transparent transparent transparent;
+  }
+}
+
+
+
+.timeLine .txt h3,
+.timeLine .txt h3 span{
+  font-size: 24px;
+  font-weight: 500;
+  color: #FFF;
+}
+
+.timeLine .txt h3{
+  padding: 10px 20px;
+}
+
+
+
+.timeLine li:nth-child(3n+1) h3{
+  background-color: #00c2e8;
+}
+
+.timeLine li:nth-child(4n+2) h3{
+  background-color: #E13C49;
+}
+
+.timeLine li:nth-child(4n+3) h3{
+  background-color: #F0B900;
+}
+
+.timeLine .txt p{
+  padding: 10px 20px;
+}
+
+.timeLine .txt span{
+  display: block;
+  padding-top: 5px;
+  font-size: 16px;
+  color: #666;
+}
+
+
+
+
+
+

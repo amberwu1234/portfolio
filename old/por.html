@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <style>
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .resume{
+      padding: 80px 0;
+      background-color: #ddd;
+    }
+
+    .container{
+      max-width: 1200px;
+      margin: auto;
+      background-color: blue;
+    }
+
+    .timeLine{
+      /* flex-direction: column-reverse; */
+      background-color: pink;
+    }
+
+   
+
+    
+
+    .timeLine li + li{
+      margin-top: 40px;
+    }
+
+
+    .timeLine .timeNode{
+      position: relative;
+      max-width: 800px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      background-color: green;
+    }
+
+    .timeLine i{
+      width: 30%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 50px;
+    }
+
+    .timeLine .txt{
+      width: 70%;
+      padding: 20px;
+      background-color: #fff;
+    }
+
+    .timeLine .txt:before{
+      content: '';
+      position: absolute;
+      left: -20px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      border-width: 0 0 20px 20px;
+      border-color: transparent transparent #fff transparent;
+    }
+
+    .timeLine .txt span{
+      display: block;
+    }
+
+    @media screen and (min-width:768px){
+      .timeLine .txt time{
+        position: absolute;
+        left: -80px;
+      }
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <section class="resume">
+    <div class="container">
+      <ul class="timeLine">
+        
+        
+        <li>
+          <div class="timeNode"> 
+            <i class="fas fa-graduation-cap"></i>
+            <div class="txt">
+              <h3>產品設計師<span>尤美資訊有限公司(網路通訊業)</span></h3>
+              <time>2013-2014sfvssxdsfsfsdsf</time>
+            </div>
+          </div>
+        </li>
+        
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </section>
+  
+  
+</body>
+</html>
