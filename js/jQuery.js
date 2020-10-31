@@ -15,10 +15,8 @@ $(function () {
     }
 
 
-    if(nowPosition = resumeHeight){
 
-    }
-
+   
     console.log(nowPosition)
     console.log(resumeHeight)
 
@@ -26,6 +24,15 @@ $(function () {
   });
 
 
+
+  $('.resume .rocket').click(function(){
+    $('.resume .rocket').addClass('active');
+    $('.timeLine li:last-child .txt').addClass('active');
+
+    $('.timeLine li:first-child .timeNode').addClass('active');
+
+
+  })
 
   
 

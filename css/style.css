@@ -80,9 +80,12 @@ section{
   transition: .3s;
 }
 
-.headerMain.active{
-  background:  #232325;
-  border-color: #F0B900;
+
+@media screen and (min-width:768px){
+  .headerMain.active{
+    background:  #232325;
+    border-color: #F0B900;
+  }
 }
 
 .navMain{
@@ -106,13 +109,17 @@ section{
   margin-left: 40px;
 }
 
-.navMain a.active{
-  color:#F0B900;
+@media screen and (min-width:768px){
+  .navMain a.active{
+    color:#F0B900;
+  }
+  
+  .navMain a.active:hover{
+    border-bottom: 1px solid #F0B900;
+  }
 }
 
-.navMain a.active:hover{
-  border-bottom: 1px solid #F0B900;
-}
+
 
 
 
@@ -539,7 +546,6 @@ section{
 /*resume區塊開始--------------------------------------------*/
 .resume{
   display: flex;
-  align-items: center;
   color: #fff;
   background: #233b71;
 }
@@ -549,6 +555,7 @@ section{
   width: 100%;
   padding: 25px 0;
 }
+
 
 @media screen and (min-width:768px){
   .resume .container{
@@ -573,7 +580,6 @@ section{
 .timeLine{
   display: flex;
   flex-direction: column-reverse;
-  padding: 20px;
   overflow: hidden;
   background: #233b71;
 }
@@ -709,7 +715,7 @@ section{
 }
  
 
-/*最後li特殊處理------------------------------------*/
+/*最後li特殊處理結束------------------------------------*/
 
 
 
@@ -718,26 +724,13 @@ section{
   content: none;
 }
 
-.timeLine .timeNode .pic{
-  margin: auto;
-  height: 50px;
-  width: 50px;
-  line-height: 47.5px;  /*.pic 50px與img 40px 差距10px*/
-  text-align: center; 
-  cursor: pointer;
-  border-radius: 50%;
-  background-color: #00c2e8;
-  box-shadow:  0  0 10px 0px #3adeff;
-  position: relative;
-  z-index: 1;
-}
 
 .timeLine .timeNode img{
   margin-top: -15px;
   width: 50px;   
 }
 
-.timeLine li:not(:first-child) .timeNode:after{ /*小圓點*/
+.timeLine li .timeNode:after{ /*小圓點*/
   content: '\f005';
   font-family: "Font Awesome 5 Free";
   font-weight: 600;
@@ -753,6 +746,73 @@ section{
   position: relative;
   z-index: 1;
 }
+
+
+
+@media screen and (min-width:768px){
+  .timeLine li:first-child .timeNode:after{ /*火箭圓圈*/
+    cursor: pointer;
+    animation: ripple 3s linear infinite;
+    
+  }
+
+  .timeLine li:first-child .timeNode.active:after{ 
+    animation-iteration-count:0;
+  }
+}
+
+
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(58, 222, 255,0.2),
+                0 0 0 10px rgba(58, 222, 255, 0.2),
+                0 0 0 25px rgba(58, 222, 255, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(58, 222, 255, 0.2),
+                0 0 0 25px rgba(58, 222, 255, 0.4),
+                0 0 0 40px rgba(58, 222, 255, 0);
+  }
+}
+
+
+.resume .rocket{  /*火箭*/
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  transition: 0s;
+  cursor: pointer;
+}
+
+@media screen and (min-width:768px){
+  .resume .rocket.active{ /*火箭*/
+    top: -500px;
+    transition: top 3s;
+  }
+
+
+  .timeLine li:last-child .txt.active:before{
+    border-color:  #F0B900 transparent transparent transparent;
+    transition: 1s 3s;
+  }
+
+  .timeLine li:last-child .txt.active h3,
+  .timeLine li:last-child .txt.active span{
+    color:#232325;
+    font-weight: 700;
+    transition: 1s 3s;
+  }
+
+  .timeLine li:last-child .txt.active h3{
+    background: #F0B900;
+  }
+
+}
+
+
+
 
 
 .timeLine li:nth-child(3n+1) .timeNode:after{
@@ -773,7 +833,7 @@ section{
   width: 1px;
   position: absolute;
   top: 0;
-  bottom: -90px;
+  bottom: -80px;
   left: 50%;
   transform:translateX(-50%);
   background-color: #FFF;
