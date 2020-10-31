@@ -2,50 +2,37 @@ $(function () {
   $(window).scroll(function () {
     let nowPosition = $(window).scrollTop(); /*目前視窗與上方的距離*/
     let winHeight = $(window).height(); /*目前裝置的高度*/
-    let resumePosition = $('.resume').offset().top;
-    let resumeHeight = $('.resume').height();
 
-    console.log(resumePosition)
+    let resumeHeight = $('.resume').offset();/*此頁與整頁面上方的距離*/
 
-    if (nowPosition > resumePosition + resumeHeight) {
-      $('.resume').removeClass('active');
-    } else if (nowPosition > resumePosition) {
-      $('.resume').addClass('active');
-      // $('.scroll').animate({
-      //   height: winHeight + 500,
-      // },0,);
 
-    } else {
-      $('.resume').removeClass('active');
+    if(winHeight * 2 - 10 >= nowPosition && nowPosition >= winHeight ){
+      $('.navMain a').addClass('active');
+      $('.headerMain').addClass('active');
+    }else{
+      $('.navMain a').removeClass('active');
+      $('.headerMain').removeClass('active');
     }
+
+
+    if(nowPosition = resumeHeight){
+
+    }
+
+    console.log(nowPosition)
+    console.log(resumeHeight)
+
+
   });
+
+
+
+  
+
+
 });
 
 
 
 
 
-
-
-// $(function () {
-//   const $resumeElm = $('.resume');
-//   const resumePosition = $resumeElm.offset().top;
-
-//   $(window).scroll(function () {
-//     const nowPosition = $(window).scrollTop(); /*目前視窗與上方的距離*/
-//     const winHeight = $(window).height(); /*目前裝置的高度*/
-
-//     if (nowPosition > resumePosition + $resumeElm.height()) {
-//       $resumeElm.removeClass('active');
-
-//     } else if (nowPosition > resumePosition) {
-//         $resumeElm.addClass('active');
-//         $('.scroll').animate({
-//           height: winHeight + 500 + 120 + 120,
-//           }, 0,);
-
-//     } else {
-//       $resumeElm.removeClass('active');
-//     }
-//   });
-// });
