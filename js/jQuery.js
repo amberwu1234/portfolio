@@ -1,4 +1,8 @@
 $(function () {
+  
+ 
+
+
   $(window).scroll(function () {
     let nowPosition = $(window).scrollTop(); /*目前視窗與上方的距離*/
     let winHeight = $(window).height(); /*目前裝置的高度*/
@@ -15,13 +19,15 @@ $(function () {
     }
 
 
-
-   
-    console.log(nowPosition)
-    console.log(resumeHeight)
-
-
+  
   });
+
+
+  // $('.cover.perspective .pic').animate({
+	// 	'left': 200
+	// }).animate({
+	// 	'top': 200
+	// })
 
 
 

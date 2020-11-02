@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>About Me</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/aos.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>
 <body>
@@ -26,13 +27,16 @@
     <div class="container">
       <div class="itemGroup">
       
-        <div class="txt">
+        <div class="txt" 
+        data-aos="fade-right">
           <div class="title">
             <h2>About Me</h2>
           </div>
         </div>
 
-        <div class="pic">
+        <div class="pic" 
+        data-aos="zoom-in"
+        data-aos-delay="500">
           <img src="images/coverB.jpg" alt="">
         </div>
       </div>
@@ -43,36 +47,45 @@
 
   <section class="aboutMe">
     <div class="container">
-      <div class="itemGroup">
-        <div class="title">
+      <div class="itemGroup" >
+        <div class="title" data-aos="fade-right">
           <h2>Introduction</h2>
         </div>
   
-        <div class="item">
+        <div class="item" data-aos="fade-up">
           <div class="pic">
-            <img src="images/photo.jpg" alt="">
+            <img src="images/photo.jpg" alt="" data-aos="zoom-in">
           </div>
     
           <div class="txt">
-            <h3>吳宛陵 / Amber Wu</h3>
-            <p>1990年生，畢業於亞洲大學的商品設計系，畢業後從事平面設計以及工業設計，在過程中與團隊合作開發產品，並協調其可行性，與客戶溝通挖掘其潛在需求。</p>
+            <h3 data-aos="fade-up">
+            吳宛陵 / Amber Wu</h3>
+            <p data-aos="fade-up">1990年生，畢業於亞洲大學的商品設計系，畢業後從事平面設計以及工業設計，在過程中與團隊合作開發產品，並協調其可行性，與客戶溝通挖掘其潛在需求。</p>
 
-            <p>近年因考量未來發展性，故決定轉職程式設計，目前已具備基礎的HTML、CSS以及響應式網頁(RWD)切版能力，並能搭配jQuery做出基本的互動頁面。</p>
+            <p data-aos="fade-up">近年因考量未來發展性，故決定轉職程式設計，目前已具備基礎的HTML、CSS以及響應式網頁(RWD)切版能力，並能搭配jQuery做出基本的互動頁面。</p>
     
-            <div class="skill">
-              <div class="icon">
+            <div class="skill" >
+              <div class="icon" 
+              data-aos="flip-left" 
+              data-aos-delay="600">
                 <img src="images/HTML.png" alt="HTML-icon">
               </div>
     
-              <div class="icon">
+              <div class="icon"
+              data-aos="flip-left" 
+              data-aos-delay="800">
                 <img src="images/CSS.png" alt="CSS-icon">
               </div>
     
-              <div class="icon">
+              <div class="icon"
+              data-aos="flip-left" 
+              data-aos-delay="1000">
                 <img src="images/RWD.png" alt="RWD-icon">
               </div>
     
-              <div class="icon">
+              <div class="icon"
+              data-aos="flip-left" 
+              data-aos-delay="1200">
                 <img src="images/jQuery.png" alt="jQuery-icon">
               </div>
             </div>
@@ -85,24 +98,28 @@
 
   
 
-  <section class="resume">
-    <div class="container">
-      <div class="itemGroup">
-        <div class="title">
+  <section class="resume" id="resumeAnchor">
+    <div class="container" >
+      <div class="itemGroup" >
+        <div class="title" data-aos="fade-right">
           <h2>Resume</h2>
         </div>
   
         <ol class="timeLine">
           <li>
             <div class="col colNode">
-              <div class="timeNode">
+              <div class="timeNode" >
                 
                 <img src="images/火箭-w.png" alt="" class="rocket">
                 
               </div>
             </div>
   
-            <div class="col colTxt">
+            <div class="col colTxt" 
+            data-aos-anchor = "#resumeAnchor"
+            data-aos-anchor-placement = "bottom-bottom"
+            data-aos="fade-up"
+            data-aos-delay="100">
               <div class="txt">
                 <h3>創意商品設計系</h3>
                 <p><span>亞洲大學</span></p>
@@ -110,17 +127,26 @@
             </div>
   
             <div class="col colTime">
-              <time>2009-2013</time>
+              <time 
+              data-aos-anchor = "#resumeAnchor"
+              data-aos-anchor-placement = "bottom-bottom"
+              data-aos="fade-up" 
+              data-aos-delay="100">2009-2013</time>
             </div>
           </li>
    
-          <li>
+          <li  >
             <div class="col colNode">
               <div class="timeNode">
               </div>
             </div>
   
-            <div class="col colTxt">
+            <div class="col colTxt" 
+            
+            data-aos-anchor = "#resumeAnchor"
+            data-aos-anchor-placement = "bottom-bottom"
+            data-aos="fade-up"
+            data-aos-delay="800">
               <div class="txt">
                 <h3>平面設計師</h3>
                 
@@ -133,8 +159,12 @@
               </div>
             </div>
   
-            <div class="col colTime">
-              <time>2013-2017</time>
+            <div class="col colTime" >
+              <time 
+              data-aos-anchor = "#resumeAnchor"
+              data-aos-anchor-placement = "bottom-bottom"
+              data-aos="fade-up" 
+              data-aos-delay="800">2013-2017</time>
             </div>
           </li>
   
@@ -144,7 +174,11 @@
               <div class="timeNode"></div>
             </div>
   
-            <div class="col colTxt">
+            <div class="col colTxt"
+            data-aos-anchor = "#resumeAnchor"
+            data-aos-anchor-placement = "bottom-bottom"
+            data-aos="fade-up"
+            data-aos-delay="1500">
               <div class="txt">
                 <h3>工業設計師</h3>
                 <p><span>威臣科技(股)公司</span></p>
@@ -152,17 +186,25 @@
             </div>
   
             <div class="col colTime">
-              <time>2018-2019</time>
+              <time 
+              data-aos-anchor = "#resumeAnchor"
+              data-aos-anchor-placement = "bottom-bottom"
+              data-aos="fade-up"
+              data-aos-delay="1500">2018-2019</time>
             </div>
           </li>
   
   
           <li>
-            <div class="col colNode">
+            <div class="col colNode" >
               <div class="timeNode"></div>
             </div>
   
-            <div class="col colTxt">
+            <div class="col colTxt" 
+            data-aos-anchor = "#resumeAnchor"
+            data-aos-anchor-placement = "bottom-bottom"
+            data-aos="fade-up"
+            data-aos-delay="2200">
               <div class="txt">
                 <h3>前端工程師</h3>
               </div>
@@ -194,10 +236,20 @@
 
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
-</script>
-
+<script src="js/jquery-3.5.1.min.js"></script>
 <script src="js/jQuery.js"></script>
+
+
+<script src="js/aos.js"></script>
+  <script>
+    AOS.init({
+      duration:1000,
+      disable: function() {
+        let maxWidth = 767;
+        return window.innerWidth < maxWidth;
+      }
+    });
+  </script>
  
 
 </body>

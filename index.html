@@ -6,7 +6,8 @@
   <title>portfolio</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" href="css/aos.css">
+  
 
 </head>
 <body>
@@ -24,15 +25,19 @@
   <div class="wrap">
     <section class="cover perspective" id="Home">
       <div class="container">
-        <div class="itemGroup">
-          <div class="pic">
+        <div class="itemGroup" id="section1"
+        
+        data-aos="fade-right">
+          <div class="pic" >
             <a href="https://amberwu1234.github.io/website_travel/">
               <div class="overlay"></div>
             </a>
             <img src="images/coverA.jpg" alt="">
           </div>
     
-          <div class="txt">
+          <div class="txt"
+          data-aos="zoom-in"
+          data-aos-delay="500">
             <div class="title">
               <h2>Travel Website</h2>
             </div>
@@ -48,15 +53,20 @@
   
     <section class="cover perspective" id="about">
       <div class="container">
-        <div class="itemGroup">
-          <div class="pic">
+        <div class="itemGroup" id="section2"
+        data-aos-anchor ="#section1"
+        data-aos-anchor-placement = "center-top"
+        data-aos="fade-left">
+          <div class="pic" >
             <a href="about.html">
               <div class="overlay"></div>
             </a>
             <img src="images/coverB.jpg" alt="">
           </div>
     
-          <div class="txt">
+          <div class="txt"
+          data-aos="zoom-in"
+          data-aos-delay="500">
             <div class="title">
               <h2>About Me</h2>
             </div>
@@ -73,13 +83,18 @@
 
     <section class="cover perspective"  id="website">
       <div class="container">
-        <div class="itemGroup">
+        <div class="itemGroup"
+        data-aos-anchor ="#section2"
+        data-aos-anchor-placement = "center-top" 
+        data-aos="fade-right">
           <div class="pic">
             <a href="https://www.maxlabs.com.tw/"><div class="overlay"></div></a>
             <img src="images/coverC.jpg" alt="">
           </div>
     
-          <div class="txt">
+          <div class="txt" 
+          data-aos="zoom-in"
+          data-aos-delay="500">
             <div class="title">
               <h2>Business Websites</h2>
             </div>
@@ -98,12 +113,15 @@
   
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
-  </script>
-  
+  <script src="js/jquery-3.5.1.min.js"></script>
   <script src="js/jQuery.js"></script>
-  
 
+  <script src="js/aos.js"></script>
+  <script>
+    AOS.init({
+      duration:1000,
+    });
+  </script>
   
 </body>
 </html>
