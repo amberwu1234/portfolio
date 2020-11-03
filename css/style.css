@@ -64,6 +64,38 @@ section{
   background: #000;
 }
 
+
+.loading{
+  position: fixed;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: #F0B900;
+}
+
+
+.loading .pic{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.loading img{
+  animation-name:roll;
+  animation-duration:5s;
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /*全共用區結束---------------------------*/
 
 
@@ -222,6 +254,10 @@ section{
   transition:  .3s ease;
 }
 
+.cover.perspective .pic a{
+  display: block;
+}
+
 @media screen and (min-width:768px){
   .cover.perspective .pic{
     transform: perspective(1200px) rotateY(25deg);
@@ -259,6 +295,10 @@ section{
 @media screen and (max-width:767px){
   .cover.perspective .txt{
     text-align: center;
+  }
+
+  .cover.perspective .title{
+    padding-bottom: 0;
   }
   
   .cover.perspective .title:after{

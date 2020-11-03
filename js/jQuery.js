@@ -1,4 +1,10 @@
+
+ 
+
 $(function () {
+  window.onload = function(){ 
+    $('.loading').fadeOut(1500);
+  }
   
   $(window).scroll(function () {
     let nowPosition = $(window).scrollTop(); /*目前視窗與上方的距離*/
